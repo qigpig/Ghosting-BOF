@@ -14,4 +14,4 @@
 
 ![image3](img3.png)
 
-自行套用bof-vs（https://github.com/Cobalt-Strike/bof-vs）进行编译，MinGW版等空了再加上去
+自行套用bof-vs进行编译，MinGW版等空了再加上去(https://github.com/Cobalt-Strike/bof-vs)
