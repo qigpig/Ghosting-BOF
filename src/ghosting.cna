@@ -1,0 +1,19 @@
+beacon_command_register(
+"ghosting", 
+"ghosting", 
+"usage: ghosting [path] [parameters]");
+
+alias ghosting{
+  local('$handle $data $args');
+
+  if ($2 eq "") {
+    berror($1, "usage command: help ghosting");
+    return;
+  }
+
+  $handle = openf(script_resource("bof.x64.o"));
+  $data = readb($handle, -1);
+  closef($handle);
+  $args = bof_pack($1, "zz", $2, $3);
+  beacon_inline_execute($1, $data, "go", $args);
+}
